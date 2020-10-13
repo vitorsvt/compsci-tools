@@ -1,0 +1,21 @@
+body {
+    height: 100rem;
+}
+
+table,
+tr {
+    border: 1px solid #000000;
+}
+
+td,
+th {
+    padding: 0.1rem 0.5rem;
+}
+
+th,
+tr:nth-of-type(8n + 6),
+tr:nth-of-type(8n + 7),
+tr:nth-of-type(8n + 8),
+tr:nth-of-type(8n + 9) {
+    background-color: #cccccc;
+}
