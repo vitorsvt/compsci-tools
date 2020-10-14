@@ -7,22 +7,36 @@
         <link rel="stylesheet" href="public/styles.css" />
     </head>
     <body>
+        <h1>Ciência da Computação</h1>
+        <p>
+            Conjunto de ferramentas úteis para a Ciência da Computação. Desde a
+            conversão da base numérica até a geração de tabelas verdade e mapas
+            de Karnaugh.
+        </p>
         <section>
-            <h1>Decimal to Binary</h1>
+            <h2>Decimal para binário</h2>
             <input type="number" id="decimal-to-binary-in" />
             <span id="decimal-to-binary-out"></span>
         </section>
         <section>
-            <h1>Binary to Decimal</h1>
+            <h2>Binário para decimal</h2>
             <input type="number" id="binary-to-decimal-in" />
             <span id="binary-to-decimal-out"></span>
         </section>
         <section>
-            <h1>Generate Truth Table</h1>
+            <h2>Analisar equação</h2>
+            <p>Escreva uma equação booleana, utilizando a seguinte sintaxe:</p>
+            <ul>
+                <li>Conjunção: AND, &&, &, .</li>
+                <li>Disjunção: OR, ||, |, +</li>
+                <li>Negação: NOT, !</li>
+                <li>Disjunção exclusiva: XOR, ^</li>
+            </ul>
             <input type="text" id="equation-in" />
-            <button id="equation-submit">Generate</button>
-            <br />
+            <button id="equation-submit">Analisar</button>
+            <h3>Tabela verdade:</h3>
             <table id="equation-table"></table>
+            <h3>Mapa de Karnaugh:</h3>
             <table id="equation-kmap"></table>
         </section>
         <script src="public/main.js"></script>
