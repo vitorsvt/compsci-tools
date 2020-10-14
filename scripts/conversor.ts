@@ -7,5 +7,5 @@ export const binary_to_decimal = (num: string): number => {
 };
 
 export const decimal_to_binary = (num: number): string => {
-    return num.toString(2);
+    return (num >>> 0).toString(2);
 };
