@@ -3,9 +3,9 @@ import {
     decimal_to_binary,
     binary_to_decimal,
     decimal_to_gray,
-} from "./converter";
+} from "./conversor";
 
-import { ITable, ITest } from "./interfaces";
+import { ITable, ITest } from "./types";
 
 export const generate_table = (eq: string): ITable => {
     let vars: string[] = [];

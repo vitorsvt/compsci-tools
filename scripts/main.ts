@@ -1,6 +1,6 @@
-import { decimal_to_binary } from "./converter";
+import { decimal_to_binary } from "./conversor";
 import { generate_table, generate_kmap } from "./generator";
-import { render_table } from "./render";
+import { draw_table, draw_kmap } from "./render";
 
 document.addEventListener("DOMContentLoaded", () => {
     const decimal_to_binary_in = <HTMLInputElement>(
@@ -15,18 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
         out.innerHTML = decimal_to_binary(num);
     });
 
-    const equation_in = <HTMLInputElement>(
-        document.getElementById("equation-in")
+    const equation_submit = <HTMLButtonElement>(
+        document.getElementById("equation-submit")
     );
-    equation_in.addEventListener("change", () => {
+    equation_submit.addEventListener("click", () => {
+        const equation_in = <HTMLInputElement>(
+            document.getElementById("equation-in")
+        );
         const equation = equation_in.value;
 
-        try {
-            const table = generate_table(equation);
-            const kmap = generate_kmap(table);
-            render_table(table);
-        } catch {
-            console.log("Error");
-        }
+        const table = generate_table(equation);
+        const kmap = generate_kmap(table);
+        draw_table(table);
+        draw_kmap(kmap);
     });
 });
