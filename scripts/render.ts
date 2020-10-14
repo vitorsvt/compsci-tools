@@ -3,7 +3,7 @@ import { ITable } from "./interfaces";
 
 export const render_table = (table_info: ITable) => {
     const { vars, outputs } = table_info;
-    const table = <HTMLElement>document.getElementById("logic-table");
+    const table = <HTMLElement>document.getElementById("equation-table");
 
     table.innerHTML = "";
 
