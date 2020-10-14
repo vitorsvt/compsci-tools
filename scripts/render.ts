@@ -49,7 +49,7 @@ export const draw_kmap = (kmap: ITable) => {
     const col_vars = vars.slice(lines).join("");
     let tr = document.createElement("tr");
     tr.appendChild(document.createElement("td"));
-    for (let i = 0; i < cols * 2; ++i) {
+    for (let i = 0; i < 2 ** cols; ++i) {
         let th = document.createElement("th");
         th.innerHTML = binary_negation(
             col_vars,
@@ -60,7 +60,7 @@ export const draw_kmap = (kmap: ITable) => {
     table.appendChild(tr);
 
     const line_vars = vars.slice(0, lines).join("");
-    for (let i = 0; i < lines * 2; ++i) {
+    for (let i = 0; i < 2 ** lines; ++i) {
         let tr = document.createElement("tr");
         let th = document.createElement("th");
         th.innerHTML = binary_negation(
@@ -69,9 +69,9 @@ export const draw_kmap = (kmap: ITable) => {
         );
         tr.appendChild(th);
 
-        for (let j = 0; j < cols * 2; ++j) {
+        for (let j = 0; j < 2 ** cols; ++j) {
             let td = document.createElement("td");
-            td.innerHTML = outputs[i * (cols * 2) + j].toString();
+            td.innerHTML = outputs[i * 2 ** cols + j].toString();
             tr.appendChild(td);
         }
         table.appendChild(tr);

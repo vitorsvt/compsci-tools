@@ -44,9 +44,9 @@ export const generate_kmap = (table: ITable): ITable => {
     const cols = Math.floor(vars.length / 2);
     const lines = vars.length - cols;
 
-    for (let i = 0; i < lines * 2; ++i) {
+    for (let i = 0; i < 2 ** lines; ++i) {
         let x = pad(decimal_to_gray(i), lines);
-        for (let j = 0; j < cols * 2; ++j) {
+        for (let j = 0; j < 2 ** cols; ++j) {
             let y = pad(decimal_to_gray(j), cols);
             let index = binary_to_decimal(x.concat(y));
             karnaugh.push(outputs[index]);
