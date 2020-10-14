@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "rootDir": "scripts",
+        "target": "ES2019",
+        "module": "CommonJS",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    }
+}
